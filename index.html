@@ -1,89 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Beiler - Journey into Tech</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David Beiler | Tech Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        h1 {
-            color: #2c3e50;
-        }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        .section {
-            margin-bottom: 30px;
-        }
+    nav {
+      background: #1a252f;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
 
-        .section h2 {
-            color: #34495e;
-            margin-bottom: 10px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
 
-        .section p {
-            line-height: 1.6;
-        }
+    nav a:hover {
+      color: #18bc9c;
+    }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #888;
-            font-size: 0.9em;
-        }
-    </style>
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    footer {
+      background: #1a252f;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1em;
+    }
+
+    button {
+      background: #18bc9c;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #15a589;
+    }
+  </style>
 </head>
 <body>
 
+<header>
+  <h1>David Beiler</h1>
+  <p>Passionate Learner • Future Technologist • Community Builder</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#sharing">Sharing</a>
+  <a href="#career">Career Goals</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <div class="container">
-    <h1>Meet David Beiler</h1>
-    <p>Welcome to my page! I'm David Beiler, and I'm excited to share my journey into the world of technology.</p>
+  <section id="about">
+    <h2>Why I'm Learning Computers</h2>
+    <p>
+      I'm diving into the world of computers because technology is the foundation of modern life. From building websites to solving real-world problems through code, I’m fascinated by how much we can create and achieve using computers. I want to understand how things work under the hood, and eventually build software that has a positive impact.
+    </p>
+  </section>
 
-    <div class="section">
-        <h2>Why I'm Learning Computers</h2>
-        <p>
-            Technology is shaping the world around us, and I want to be part of that transformation. I'm learning about
-            computers because I believe they are powerful tools for creativity, problem-solving, and building a better future.
-            From understanding how software works to exploring how machines communicate, I'm diving deep into this fascinating world.
-        </p>
-    </div>
+  <section id="sharing">
+    <h2>Why I Want to Share</h2>
+    <p>
+      The journey is better when it’s shared. I believe in building a tech community that learns and grows together. Whether it's helping a beginner understand a concept or collaborating on open-source projects, I want to lift others up as I grow myself. Knowledge should be accessible and empowering.
+    </p>
+  </section>
 
-    <div class="section">
-        <h2>Sharing Knowledge with Others</h2>
-        <p>
-            Learning is even more rewarding when it's shared. I want to help others who are starting their tech journey—
-            whether it's answering questions, mentoring, or creating content that explains difficult topics in simple ways.
-            Building a supportive tech community is something I'm passionate about.
-        </p>
-    </div>
+  <section id="career">
+    <h2>My Career Goals</h2>
+    <p>
+      My dream is to launch a meaningful career in the tech industry. I'm especially interested in front-end development, cybersecurity, and the ethical use of AI. My goal is to keep learning, build cool stuff, and work with a team that values creativity, impact, and curiosity.
+    </p>
+  </section>
 
-    <div class="section">
-        <h2>Starting a Career in Tech</h2>
-        <p>
-            My goal is to launch a career in the tech industry where I can continue learning and contribute to meaningful projects.
-            I'm especially interested in areas like web development, cybersecurity, and software engineering. With every step,
-            I'm getting closer to turning my passion into a profession.
-        </p>
-    </div>
-
-    <footer>
-        &copy; 2025 David Beiler • All rights reserved
-    </footer>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to connect, collaborate, or just say hi, feel free to reach out below:</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top:10px; font-size:0.9em;">*You can use a service like <a href="https://formspree.io" target="_blank">Formspree</a> to make this form work.</p>
+  </section>
 </div>
+
+<footer>
+  &copy; 2025 David Beiler — Built with ❤️ and HTML
+</footer>
 
 </body>
 </html>
