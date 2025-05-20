@@ -10,82 +10,115 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
+      background: linear-gradient(180deg, #f0f2f5 0%, #ffffff 100%);
+      color: #2c3e50;
+      line-height: 1.7;
     }
 
     header {
-      background: #2c3e50;
+      background: #1a252f;
       color: white;
-      padding: 20px 0;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
     }
 
     nav {
-      background: #1a252f;
+      background: #16202a;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px;
+      gap: 25px;
+      padding: 15px;
       position: sticky;
       top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     nav a {
-      color: white;
+      color: #f0f0f0;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
+      font-size: 1em;
+      transition: color 0.3s, transform 0.3s;
     }
 
     nav a:hover {
       color: #18bc9c;
+      transform: scale(1.05);
     }
 
     .container {
-      max-width: 960px;
-      margin: 40px auto;
+      max-width: 900px;
+      margin: 50px auto;
       padding: 0 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     section {
-      margin-bottom: 60px;
+      margin-bottom: 70px;
     }
 
     h2 {
+      font-size: 1.8em;
       color: #2c3e50;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      border-left: 5px solid #18bc9c;
+      padding-left: 10px;
     }
 
     p {
       font-size: 1.1em;
+      color: #333;
+      line-height: 1.8;
     }
 
     footer {
       background: #1a252f;
-      color: #ccc;
+      color: #bbb;
       text-align: center;
-      padding: 30px 10px;
+      padding: 30px 20px;
+      font-size: 0.95em;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 20px;
+      gap: 15px;
+      margin-top: 25px;
     }
 
     input, textarea {
-      padding: 10px;
-      border-radius: 5px;
+      padding: 12px;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      font-family: inherit;
       font-size: 1em;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #18bc9c;
+      outline: none;
     }
 
     button {
@@ -93,13 +126,35 @@
       color: white;
       border: none;
       padding: 12px;
-      border-radius: 5px;
+      border-radius: 6px;
       font-size: 1em;
+      font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     button:hover {
       background: #15a589;
+    }
+
+    a {
+      color: #18bc9c;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .container {
+        padding: 0 15px;
+      }
     }
   </style>
 </head>
@@ -121,39 +176,39 @@
   <section id="about">
     <h2>Why I'm Learning Computers</h2>
     <p>
-      I'm diving into the world of computers because technology is the foundation of modern life. From building websites to solving real-world problems through code, I’m fascinated by how much we can create and achieve using computers. I want to understand how things work under the hood, and eventually build software that has a positive impact.
+      Technology is at the heart of innovation—and that’s exactly where I want to be. My journey into the world of computers is fueled by curiosity and the desire to build, solve, and create. From web design to real-world problem-solving with code, I’m here to master the skills that shape the future.
     </p>
   </section>
 
   <section id="sharing">
     <h2>Why I Want to Share</h2>
     <p>
-      The journey is better when it’s shared. I believe in building a tech community that learns and grows together. Whether it's helping a beginner understand a concept or collaborating on open-source projects, I want to lift others up as I grow myself. Knowledge should be accessible and empowering.
+      Growth happens when we share knowledge. I believe in building a community that supports one another. Whether it's through teaching, mentorship, or open-source contributions, my mission is to empower others as I grow. Collaboration is the core of creativity.
     </p>
   </section>
 
   <section id="career">
     <h2>My Career Goals</h2>
     <p>
-      My dream is to launch a meaningful career in the tech industry. I'm especially interested in front-end development, cybersecurity, and the ethical use of AI. My goal is to keep learning, build cool stuff, and work with a team that values creativity, impact, and curiosity.
+      I aspire to build a meaningful career in technology, with a special interest in front-end development, cybersecurity, and ethical AI. My vision is to combine creativity and responsibility to design digital experiences that are both impactful and ethical—while being part of a team that values innovation, learning, and inclusivity.
     </p>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>If you'd like to connect, collaborate, or just say hi, feel free to reach out below:</p>
+    <p>If you'd like to collaborate or just connect, drop me a message below:</p>
     <form action="https://formspree.io/f/your-form-id" method="POST">
       <input type="text" name="name" placeholder="Your Name" required/>
       <input type="email" name="email" placeholder="Your Email" required/>
       <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p style="margin-top:10px; font-size:0.9em;">*You can use a service like <a href="https://formspree.io" target="_blank">Formspree</a> to make this form work.</p>
+    <p style="margin-top:10px; font-size:0.9em;">*This form uses <a href="https://formspree.io" target="_blank">Formspree</a> to send messages securely.</p>
   </section>
 </div>
 
 <footer>
-  &copy; 2025 David Beiler — Built with ❤️ and HTML
+  &copy; 2025 David Beiler — Built with ❤️ and HTML • Always Learning • Always Creating
 </footer>
 
 </body>
