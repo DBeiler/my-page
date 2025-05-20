@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>David Beiler | Tech Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -67,12 +68,6 @@
       max-width: 900px;
       margin: 50px auto;
       padding: 0 20px;
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     section {
@@ -160,11 +155,13 @@
 </head>
 <body>
 
-<header>
+<!-- HEADER -->
+<header data-aos="fade-down">
   <h1>David Beiler</h1>
   <p>Passionate Learner • Future Technologist • Community Builder</p>
 </header>
 
+<!-- NAVIGATION -->
 <nav>
   <a href="#about">About</a>
   <a href="#sharing">Sharing</a>
@@ -172,32 +169,33 @@
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- MAIN CONTENT -->
 <div class="container">
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>Why I'm Learning Computers</h2>
     <p>
       Technology is at the heart of innovation—and that’s exactly where I want to be. My journey into the world of computers is fueled by curiosity and the desire to build, solve, and create. From web design to real-world problem-solving with code, I’m here to master the skills that shape the future.
     </p>
   </section>
 
-  <section id="sharing">
+  <section id="sharing" data-aos="fade-up" data-aos-delay="100">
     <h2>Why I Want to Share</h2>
     <p>
       Growth happens when we share knowledge. I believe in building a community that supports one another. Whether it's through teaching, mentorship, or open-source contributions, my mission is to empower others as I grow. Collaboration is the core of creativity.
     </p>
   </section>
 
-  <section id="career">
+  <section id="career" data-aos="fade-up" data-aos-delay="200">
     <h2>My Career Goals</h2>
     <p>
       I aspire to build a meaningful career in technology, with a special interest in front-end development, cybersecurity, and ethical AI. My vision is to combine creativity and responsibility to design digital experiences that are both impactful and ethical—while being part of a team that values innovation, learning, and inclusivity.
     </p>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up" data-aos-delay="300">
     <h2>Contact Me</h2>
     <p>If you'd like to collaborate or just connect, drop me a message below:</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
+    <form action="https://formspree.io/f/xovdbbqv" method="POST">
       <input type="text" name="name" placeholder="Your Name" required/>
       <input type="email" name="email" placeholder="Your Email" required/>
       <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
@@ -207,9 +205,20 @@
   </section>
 </div>
 
+<!-- FOOTER -->
 <footer>
   &copy; 2025 David Beiler — Built with ❤️ and HTML • Always Learning • Always Creating
 </footer>
+
+<!-- ANIMATION LIBRARY -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
 
 </body>
 </html>
